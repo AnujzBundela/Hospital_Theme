@@ -60,9 +60,9 @@
 
             <div class="row">
               <div class="col-auto topheadLinks">
-                <a target="_blank" href="tel:+916354710794" id="h-mobile"><i class="fa-solid fa-phone"
+                <a target="_blank" href="data.h_mobile_href" id="h-mobile"><i class="fa-solid fa-phone"
                     aria-hidden="true"></i> +91 63547 10794</a>
-                <a target="_blank" href="https://maps.app.goo.gl/SpVEJEUTqrr3huJT9" id="h-location"><i
+                <a target="_blank" href="data.h_location_href" id="h-location"><i
                     class="fa-solid fa-location-dot" aria-hidden="true"></i>Vadodara</a>
               </div>
               <div class="col-auto topheadSocial">
@@ -1183,86 +1183,71 @@ Main Road, Vadodara,391410</pre>
         console.log("data:", data);
 
         // Update contact and social info
-        document.getElementById("h-mobile").innerHTML = `<a target="_blank" href="tel:+916354710794" id="h-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i>${data.h_mobile}</a>;`
-        document.getElementById("h-location").innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/SpVEJEUTqrr3huJT9" id="h-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>${data.h_location}</a>;`
-        document.getElementById("h-facebook-link").innerHTML = `<a target="_blank" href="${data.h_facebook_link}" id="h-facebook-link"><i class="fa-brands fa-facebook"></i></a>;`
-        document.getElementById("h-instagram-link").innerHTML = `<a target="_blank" href="${data.h_instagram_link}" id="h-instagram-link"><i class="fa-brands fa-square-instagram"></i></a>;`
+        document.getElementById("h-mobile").innerHTML = `<a target="_blank" href="tel:+916354710794" id="h-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i>${data.h_mobile}</a>`
+        document.getElementById("h-mobile").href = `<a target="_blank" href="${data.h_mobile_href}" id="h-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>`
+        document.getElementById("h-location").innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/SpVEJEUTqrr3huJT9" id="h-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>${data.h_location}</a>`
+        
+        document.getElementById("h-facebook-link").innerHTML = `<a target="_blank" href="${data.h_facebook_link}" id="h-facebook-link"><i class="fa-brands fa-facebook"></i></a>`
+        document.getElementById("h-instagram-link").innerHTML = `<a target="_blank" href="${data.h_instagram_link}" id="h-instagram-link"><i class="fa-brands fa-square-instagram"></i></a>`
         document.getElementById("h-logo").src = data.h_logo;
         document.getElementById("service-image-1").src = data.service_image_1;
         document.getElementById("service-title-1").textContent = data.service_title_1;
         document.getElementById("service-description-1").textContent = data.service_description_1;
-
         document.getElementById("service-image-2").src = data.service_image_2;
         document.getElementById("service-title-2").textContent = data.service_title_2;
         document.getElementById("service-description-2").textContent = data.service_description_2;
-
         document.getElementById("service-image-3").src = data.service_image_3;
         document.getElementById("service-title-3").textContent = data.service_title_3;
         document.getElementById("service-description-3").textContent = data.service_description_3;
-
         document.getElementById("service-image-4").src = data.service_image_4;
         document.getElementById("service-title-4").textContent = data.service_title_4;
         document.getElementById("service-description-4").textContent = data.service_description_4;
-
         document.getElementById("service-image-5").src = data.service_image_5;
         document.getElementById("service-title-5").textContent = data.service_title_5;
         document.getElementById("service-description-5").textContent = data.service_description_5;
-
         document.getElementById("service-image-6").src = data.service_image_6;
         document.getElementById("service-title-6").textContent = data.service_title_6;
         document.getElementById("service-description-6").textContent = data.service_description_6;
-
         document.getElementById("about-title").textContent = data.about_title;
         document.getElementById("about-description").textContent = data.about_description;
-
         document.getElementById("about-statistic-icon-1").src = data.about_statistic_icon_1;
         document.getElementById("about-statistic-service-1").textContent = data.about_statistic_service_1;
         document.getElementById("about-statistic-title-1").textContent = data.about_statistic_title_1;
-
         document.getElementById("about-statistic-icon-2").src = data.about_statistic_icon_2;
         document.getElementById("about-statistic-service-2").textContent = data.about_statistic_service_2;
         document.getElementById("about-statistic-title-2").textContent = data.about_statistic_title_2;
-
         document.getElementById("about-statistic-icon-3").src = data.about_statistic_icon_3;
         document.getElementById("about-statistic-service-3").textContent = data.about_statistic_service_3;
         document.getElementById("about-statistic-title-3").textContent = data.about_statistic_title_3;
-
         document.getElementById("about-statistic-icon-4").src = data.about_statistic_icon_4;
         document.getElementById("about-statistic-service-4").textContent = data.about_statistic_service_4;
         document.getElementById("about-statistic-title-4").textContent = data.about_statistic_title_4;
-
         document.getElementById("about-image-1").src = data.about_image_1;
         document.getElementById("about-image-2").src = data.about_image_2;
-
         document.getElementById("about-choice-title").textContent = data.about_choice_title;
-
         document.getElementById("button-1-name").textContent = data.button_1_name;
         document.getElementById("button-2-name").textContent = data.button_2_name;
         document.getElementById("button-3-name").textContent = data.button_3_name;
         document.getElementById("button-4-name").textContent = data.button_4_name;
         document.getElementById("button-5-name").textContent = data.button_5_name;
         document.getElementById("button-6-name").textContent = data.button_6_name;
-
         document.getElementById("button-1-samename").textContent = data.button_1_samename;
         document.getElementById("button-2-samename").textContent = data.button_2_samename;
         document.getElementById("button-3-samename").textContent = data.button_3_samename;
         document.getElementById("button-4-samename").textContent = data.button_4_samename;
         document.getElementById("button-5-samename").textContent = data.button_5_samename;
         document.getElementById("button-6-samename").textContent = data.button_6_samename;
-
         document.getElementById("button-1-description").textContent = data.button_1_description;
         document.getElementById("button-2-description").textContent = data.button_2_description;
         document.getElementById("button-3-description").textContent = data.button_3_description;
         document.getElementById("button-4-description").textContent = data.button_4_description;
         document.getElementById("button-5-description").textContent = data.button_5_description;
         document.getElementById("button-6-description").textContent = data.button_6_description;
-
         document.getElementById("schedule-contact").textContent = data.schedule_contact
         document.getElementById("schedule-email").textContent = data.schedule_email
         document.getElementById("schedule-contact").href = `tel:${data.schedule_contact}`;
         document.getElementById("schedule-email").href = `mailto:${data.schedule_email}`;
         document.getElementById("schedule-map").href = data.schedule_map;
-
         document.getElementById("gallery-image-1").src = data.gallery_image_1;
         document.getElementById("gallery-image-2").src = data.gallery_image_2;
         document.getElementById("gallery-image-3").src = data.gallery_image_3;
@@ -1271,7 +1256,6 @@ Main Road, Vadodara,391410</pre>
         document.getElementById("gallery-image-6").src = data.gallery_image_6;
         document.getElementById("gallery-image-7").src = data.gallery_image_7;
         document.getElementById("gallery-image-8").src = data.gallery_image_8;
-
         document.getElementById("footer-logo").src = data.footer_logo;
         document.getElementById("footer-description").textContent = data.footer_descripton;
         document.getElementById("footer-address").textContent = data.footer_address;
@@ -1283,9 +1267,7 @@ Main Road, Vadodara,391410</pre>
         document.getElementById("footer-facebook").href = data.footer_facebook_href;
         document.getElementById("footer-instagram").href = data.footer_instagram_href;
         document.getElementById("footer-whatsapp").href = data.footer_whatsapp_href;
-
         document.getElementById("footer-whatsapp-fabicon").href = data.footer_whatsapp_fabicon;
-        // document.getElementById("footer-contact-fabicon").href = data.footer_contact_fabicon;
         document.getElementById("footer-contact-fabicon").href = `tel:${data.footer_contact_fabicon}`;
 
 
