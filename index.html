@@ -62,8 +62,8 @@
               <div class="col-auto topheadLinks">
                 <a target="_blank" href="data.h_mobile_href" id="h-mobile"><i class="fa-solid fa-phone"
                     aria-hidden="true"></i> <span>+91 63547 10794</span></a>
-                <a target="_blank" href="data.h_location_href" id="h-location"><i
-                    class="fa-solid fa-location-dot" aria-hidden="true"></i>Vadodara</a>
+                <a target="_blank" href="data.h_location_href" id="h-location"><i class="fa-solid fa-location-dot"
+                    aria-hidden="true"></i><span>Vadodara</span></a>
               </div>
               <div class="col-auto topheadSocial">
                 <a target="_blank" href="https://www.facebook.com/" id="h-facebook-link"><i
@@ -881,7 +881,8 @@ Main Road, Vadodara,391410</pre>
               </li>
               <li>
                 <a class="emailAnchor footerLinks" href="data.footer_email" id="footer-email">
-                  <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>contact@shriiitrackingsolutions.com</span></a>
+                  <i class="fa-solid fa-envelope"
+                    aria-hidden="true"></i><span>contact@shriiitrackingsolutions.com</span></a>
               </li>
             </ul>
             <div class="social-icons mt-3">
@@ -1183,12 +1184,11 @@ Main Road, Vadodara,391410</pre>
         console.log("data:", data);
 
         // Update contact and social info
-        // document.getElementById("h-mobile").innerHTML = `<a target="_blank" href="tel:+916354710794" id="h-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i>${data.h_mobile}</a>`
-        // document.getElementById("h-mobile").href = `<a target="_blank" href="${data.h_mobile_href}" id="h-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>`
-        // document.getElementById("h-location").innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/SpVEJEUTqrr3huJT9" id="h-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>${data.h_location}</a>`
-                document.querySelector("#h-mobile span").textContent = `+91 ${data.h_mobile}`;
-                document.getElementById("h-mobile").href = `tel:${data.h_mobile_href}`;
 
+        document.querySelector("#h-mobile span").textContent = `+91 ${data.h_mobile}`;
+        document.getElementById("h-mobile").href = `tel:${data.h_mobile_href}`;
+        document.querySelector("#h-location span").textContent = data.h_location;
+        document.getElementById("h-location").href = data.h_location_href;
 
         document.getElementById("h-facebook-link").innerHTML = `<a target="_blank" href="${data.h_facebook_link}" id="h-facebook-link"><i class="fa-brands fa-facebook"></i></a>`
         document.getElementById("h-instagram-link").innerHTML = `<a target="_blank" href="${data.h_instagram_link}" id="h-instagram-link"><i class="fa-brands fa-square-instagram"></i></a>`
