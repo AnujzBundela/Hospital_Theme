@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GraceCare Hospital</title>
+  <title id="website-title">GraceCare Hospital</title>
   <!-- Meta Robots (SEO Indexing): -->
   <meta name="robots" content="index, follow">
   <meta name="description"
@@ -23,7 +23,7 @@
 
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="image/FaviconIcon.webp" />
+  <link rel="icon" type="image/x-icon" id="favicon-image" href="#" />
 
   <link fetchpriority="high" rel="preload" href="image/GraceCareLogo.webp" as="image" type="image/webp" />
   <link fetchpriority="high" rel="preload" href="image/GraceCareBanner1.webp" as="image" type="image/webp" />
@@ -925,7 +925,8 @@ Main Road, Vadodara,391410</pre>
         <div class="row ">
           <div class="col-12">
             <div class="inner">
-              <div class="copyright text-center"> <span class="year"></span> All Rights Reserved by GraceCare Hospital |
+              <div class="copyright text-center"> <span class="year"></span> All Rights Reserved by <span
+                  id="footer-copyright">GraceCare Hospital</span> |
                 Developed by <a href="https://shriiitrackingsolution.in/" target="_blank">
                   <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
                 </a>
@@ -1302,6 +1303,13 @@ Main Road, Vadodara,391410</pre>
         document.querySelector("#footer-button-4 span").textContent = data.footer_button_4;
         document.querySelector("#footer-button-5 span").textContent = data.footer_button_5;
         document.querySelector("#footer-button-6 span").textContent = data.footer_button_6;
+        document.getElementById("footer-copyright").textContent = data.footer_copyright;
+        document.getElementById("favicon-image").href = data.favicon_image;
+        
+
+        document.getElementById("website-title").textContent = data.website_title;
+
+
 
 
         // === Destroy Owl Carousel First ===
